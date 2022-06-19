@@ -1,6 +1,5 @@
-import { render } from "react-dom";
-import { ThemeProvider } from "@material-ui/styles";
-import { CssBaseline } from "@material-ui/core";
+import { createRoot } from "react-dom/client";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 import theme from "./theme";
 import MainLayout from "./MainLayout";
 
@@ -14,4 +13,5 @@ const App = () => {
   );
 };
 
-render(<App />, document.getElementById("app"));
+const root = createRoot(document.getElementById("app"));
+root.render(<App />);

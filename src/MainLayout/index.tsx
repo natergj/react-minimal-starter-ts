@@ -1,19 +1,11 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { Box } from "@mui/material";
 import MainAppBar from "./MainAppBar";
 
-const useStyles = makeStyles(() => ({
-  root: {
-    flexGrow: 1,
-  }
-}));
-
 const MainLayout: React.FunctionComponent = () => {
-  const classes = useStyles({});
-
   return (
-    <div className={classes.root}>
+    <Box sx={{ flexGrow: 1 }}>
       <MainAppBar />
-    </div>
+    </Box>
   );
 };
 
